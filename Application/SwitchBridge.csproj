@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>SwitchBridge</RootNamespace>
+    <AssemblyName>SwitchBridge</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- SDL2 bindings for C# -->
+    <PackageReference Include="ppy.SDL2-CS" Version="1.0.741-alpha" />
+    <!-- DirectShow .NET library for video capture -->
+    <PackageReference Include="DirectShowLib" Version="2.1.0" />
+    <!-- Serial port communication -->
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
