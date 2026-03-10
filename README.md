@@ -5,17 +5,17 @@ A two-part system for streaming Nintendo Switch gameplay with remote controller 
 ## Architecture
 
 ```
-┌──────────────┐    USB Serial     ┌──────────────┐   Bluetooth    ┌──────────────┐
-│  SwitchBridge │ ───────────────► │  Pico W       │ ────────────► │  Nintendo     │
-│  Application  │   (115200 baud)  │  Firmware     │  (Pro Ctrl)   │  Switch       │
-│  (Windows/C#) │                  │  (C/C++)      │               │              │
+┌──────────────┐    USB Serial    ┌──────────────┐   Bluetooth   ┌──────────────┐
+│ SwitchBridge │ ───────────────► │  Pico W      │ ────────────► │  Nintendo    │
+│ Application  │   (115200 baud)  │  Firmware    │  (Pro Ctrl)   │  Switch      │
+│ (Windows/C#) │                  │  (C/C++)     │               │              │
 │              │                  └──────────────┘               │              │
-│  SDL Input   │                                                  │              │
-│  + Gyro      │                                                  │   HDMI Out   │
-│              │                                                  │      │       │
-│  Video Feed ◄├──── Capture Card ◄───────────────────────────────┘      │       │
-│  (DirectShow)│                                                         │       │
-└──────────────┘                                                         ▼       
+│  SDL Input   │                                                 │              │
+│  + Gyro      │                                                 │              │
+│              │                                                 │              │
+│  Video Feed  │◄───────── HDMI Out Capture Card ◄───────────────└──────────────┘
+│  (DirectShow)│                                                              
+└──────────────┘                                                               
 ```
 
 ## Components
